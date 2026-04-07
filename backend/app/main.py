@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 from pathlib import Path
 import os
 
-from app.api.divination import router as divination_router
-from app.core.config import settings
+from backend.app.api.divination import router as divination_router
+from backend.app.core.config import settings
 
 _env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(dotenv_path=_env_path, override=True)

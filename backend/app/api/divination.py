@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request
-from app.models.schemas import DivinationRequest, DivinationResponse
-from app.services.ai_service import ai_service
-from app.core.limiter import rate_limiter
+from backend.app.models.schemas import DivinationRequest, DivinationResponse
+from backend.app.services.ai_service import ai_service
+from backend.app.core.limiter import rate_limiter
 
 router = APIRouter()
 

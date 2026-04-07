@@ -1,4 +1,4 @@
-from app.core.config import settings
+from backend.app.core.config import settings
 import hashlib
 from datetime import datetime
 

@@ -1,7 +1,7 @@
 import json
 import httpx
 from typing import List, Dict
-from app.core.config import settings
+from backend.app.core.config import settings
 
 
 class AIService:
