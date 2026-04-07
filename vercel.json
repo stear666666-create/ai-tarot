@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "experimentalServices": {
-    "frontend": {
-      "routePrefix": "/"
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
     },
-    "backend": {
-      "entrypoint": "api/index.py",
-      "routePrefix": "/api"
+    {
+      "src": "/(.*)",
+      "dest": "dist/$1"
     }
-  }
+  ]
 }
