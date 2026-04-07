@@ -1,41 +1,12 @@
 {
   "version": 2,
   "experimentalServices": {
-    "backend": {
-      "runtime": "python",
-      "entrypoint": "api/index.py"
-    },
     "frontend": {
-      "runtime": "static",
-      "entrypoint": "dist"
-    }
-  },
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.11"
-      }
+      "routePrefix": "/"
     },
-    {
-      "src": "dist/**",
-      "use": "@vercel/static"
+    "backend": {
+      "entrypoint": "api/index.py",
+      "routePrefix": "/api"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/dist/index.html"
-    }
-  ]
+  }
 }
