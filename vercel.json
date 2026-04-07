@@ -1,5 +1,15 @@
 {
   "version": 2,
+  "experimentalServices": {
+    "backend": {
+      "runtime": "python",
+      "entrypoint": "api/index.py"
+    },
+    "frontend": {
+      "runtime": "static",
+      "entrypoint": "dist"
+    }
+  },
   "builds": [
     {
       "src": "api/index.py",
