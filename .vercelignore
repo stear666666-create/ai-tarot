@@ -1,0 +1,12 @@
+node_modules
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.git
+.env.local
+.env.*.local
+unpackage
+.vscode
+.idea
+*.log
