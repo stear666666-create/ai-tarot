@@ -1,8 +1,7 @@
-
 {
   "name": "ai-tarot",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build:h5"
+    "build": "cd frontend && npm install && npm run build:h5 && cp -r dist/build/h5/* ../dist/"
   }
 }
