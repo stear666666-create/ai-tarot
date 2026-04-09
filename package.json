@@ -2,6 +2,6 @@
   "name": "ai-tarot",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build:h5 && cp -r dist/build/h5/* ../dist/"
+    "build": "cd frontend && npm install && npm run build:h5 && node -e \"const fs=require('fs');const path=require('path');const src=path.join(__dirname,'frontend','dist','build','h5');const dest=path.join(__dirname,'dist');fs.cpSync(src,dest,{recursive:true});\""
   }
 }
